@@ -5,8 +5,8 @@ static int arr[] = {12,11,13,5,6,7};
 void merge(int left, int mid, int right) {
 
     int i = 0, j = 0, k = left; 
-    int n1 = mid - left + 1; 
-    int n2 = right - mid; 
+    int n1 = mid + 1 - left; 
+    int n2 = -mid + right; 
     int L[n1], R[n2];
 
     for (i = 0; i < n1; i++)
@@ -39,7 +39,7 @@ void merge(int left, int mid, int right) {
 }
 void mergeSort(int left, int right) {
     if (left < right) {
-        int mid = left + (right - left) / 2;
+        int mid = left + right / 2;
 
         mergeSort(left, mid);
         mergeSort(mid + 1, right);
@@ -48,12 +48,11 @@ void mergeSort(int left, int right) {
 }
 int ms() {
     printf("mergeSort \n\nGiven array is \n");
-    printArray(arr,SIZE(arr));
+    printArray(arr, SIZE(arr));
 
     mergeSort(0, SIZE(arr) - 1);
 
     printf("\nSorted array is \n");
-    printArray(arr,SIZE(arr));
-
+    printArray(arr, SIZE(arr));
     return 0;
 }
