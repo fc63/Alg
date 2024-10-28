@@ -3,6 +3,6 @@
 
 int hs();
 void heapSort();
-void heapify(int i);
+void heapify(int n, int i);
 
 #endif //HS_H

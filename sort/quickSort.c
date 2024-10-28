@@ -25,12 +25,12 @@ void quickSort(int low, int high) {
 }
 int qs() {
     printf("quickSort \n\nGiven array is \n");
-    printArray(arr, ARSZ(arr));
+    printArray(arr, SIZE(arr));
 
-    quickSort(0, ARSZ(arr) - 1);
+    quickSort(0, SIZE(arr) - 1);
 
     printf("\nSorted array is \n");
-    printArray(arr,ARSZ(arr));
+    printArray(arr,SIZE(arr));
 
     return 0;
 }

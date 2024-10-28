@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.29.6)
 project(Algo C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 23)
 
 include_directories(.)
 
 add_executable(Algo
-    functions.c
+        functions.c
         h/functions.h
         sort/mergeSort.c
         tree/BiTree.c

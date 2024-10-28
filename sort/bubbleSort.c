@@ -6,9 +6,9 @@ void bubbleSort() {
     int i = 0, j = 0;
     bool swapped = false;
 
-    for (i = 0; i < ARSZ(arr) - 1; i++) {
+    for (i = 0; i < SIZE(arr) - 1; i++) {
         swapped = false;
-        for (j = 0; j < ARSZ(arr) - 1 - i; j++) {
+        for (j = 0; j < SIZE(arr) - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
@@ -20,12 +20,12 @@ void bubbleSort() {
 }
 int bs() {
     printf("bubbleSort \n\nGiven array is \n");
-    printArray(arr, ARSZ(arr));
+    printArray(arr, SIZE(arr));
 
     bubbleSort();
 
     printf("\nSorted array is \n");
-    printArray(arr,ARSZ(arr));
+    printArray(arr,SIZE(arr));
 
     return 0;
 }
