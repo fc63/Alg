@@ -1,13 +1,12 @@
 #include "h/functions.h"
 
 int values[] = {4, 3, 12, 1, 5, 5, 3, 9};
-int * arr= NULL;
+int* arr= NULL;
 
 void countingSort() {
-
     int* n_arr = Array(size(arr), true);
     int max = maxarr(arr, size(arr));
-    int * pos = Array(max + 1, 0);
+    int* pos = Array(max + 1, 0);
     int i = 0;
 
     for (i = 0; i < size(arr); i++)
@@ -20,7 +19,6 @@ void countingSort() {
         n_arr[--pos[arr[i]]] = arr[i];
 
     sfree(pos, arr, NULL);
-
     arr = n_arr;
 }
 
@@ -36,8 +34,8 @@ void dynamiccs() {
 }
 
 int cs() {
-    arr=Array(8,false);
-    dynamicArrayValueAssignment (arr, values, SIZE(values));
+    arr=Array(SIZE(values),false);
+    dynamicArrayValueAssignment(arr, values, SIZE(values));
     dynamiccs();
     sfree(arr, NULL);
     return 0;
