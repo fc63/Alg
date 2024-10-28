@@ -4,7 +4,6 @@ int values[] = {4, 3, 12, 1, 5, 5, 3, 9};
 int* arr= NULL;
 
 void countingSort() {
-
     int* n_arr = Array(size(arr),true);
     int * pos = Array(MAX(arr) + 1, 0), i = 0;
 
