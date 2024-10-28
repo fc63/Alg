@@ -53,14 +53,6 @@ void swap(int * a, int * b) {
     * a = * b;
     * b = t;
 }
-
-int maxarr(int* arr, int arr_size) {
-    int max_val = arr[0];
-    for (int i = 1; i < arr_size; i++)
-        if (arr[i] > max_val)
-            max_val = arr[i];
-    return max_val;
-}
 int *Array(const int size, const bool notZero) {
     int* arr;
     if(notZero)

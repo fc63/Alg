@@ -13,6 +13,30 @@
 #include "cs.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
+#define MAX_STATIC(arr) ({                                \
+int max = (arr)[0];                                   \
+for (int i = 1; i < SIZE(arr); i++) {                 \
+if ((arr)[i] > max) {                             \
+max = (arr)[i];                               \
+}                                                 \
+}                                                     \
+max;                                                  \
+})
+
+#define MAX_DYNAMIC(arr) ({                 \
+int max = (arr)[0];                     \
+for (int i = 1; i < size(arr); i++) {   \
+if ((arr)[i] > max) {               \
+max = (arr)[i];                 \
+}                                   \
+}                                       \
+max;                                    \
+})
+
+#define IS_STATIC_ARRAY(arr) (sizeof(arr) > sizeof(int*))
+
+#define MAX(arr) (IS_STATIC_ARRAY(arr) ? MAX_STATIC(arr) : MAX_DYNAMIC(arr))
+
 struct BiNode {
     int data;
     struct BiNode* left;
