@@ -3,7 +3,6 @@
 static int arr[] = {12,11,13,5,6,7};
 
 void merge(int left, int mid, int right) {
-
     int i = 0, j = 0, k = left; 
     int n1 = mid + 1 - left;
     int n2 = -mid + right;
