@@ -11,13 +11,13 @@
 #include "bt.h"
 #include "hs.h"
 #include "cs.h"
-#define SIZE(arr) (sizeof(arr) / sizeof((arr)[0])) //statik arraylerde çalışır. pointerlarda çalışmaz.
+#define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 struct BiNode {
     int data;
     struct BiNode* left;
     struct BiNode* right;
-    struct BiNode* parent; //kontrol için kullanışlı
+    struct BiNode* parent;
 };
 void printArray(int A[], int size);
 struct BiNode* newBiNode(int data, struct BiNode* parent);
