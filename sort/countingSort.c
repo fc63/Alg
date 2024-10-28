@@ -5,9 +5,9 @@ int * arr= NULL;
 
 void countingSort() {
 
-    int* n_arr = Array(size(arr),true);
+    int* n_arr = Array(size(arr), true);
     int max = maxarr(arr, size(arr));
-    int * pos = Array(max + 1,0);
+    int * pos = Array(max + 1, 0);
     int i = 0;
 
     for (i = 0; i < size(arr); i++)
