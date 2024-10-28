@@ -5,18 +5,18 @@ static int arr[] = {12,11,13,5,6,7};
 void merge(int left, int mid, int right) {
 
     int i = 0, j = 0, k = left; 
-    int n1 = mid + 1 - left; 
-    int n2 = -mid + right; 
+    int n1 = mid + 1 - left;
+    int n2 = -mid + right;
     int L[n1], R[n2];
 
     for (i = 0; i < n1; i++)
-        L[i] = arr[left + i]; 
+        L[i] = arr[left + i];
 
     for (j = 0; j < n2; j++)
         R[j] = arr[mid + 1 + j];
 
-    i = 0; 
-    j = 0; 
+    i = 0;
+    j = 0;
 
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
@@ -39,7 +39,7 @@ void merge(int left, int mid, int right) {
 }
 void mergeSort(int left, int right) {
     if (left < right) {
-        int mid = left + right / 2;
+        int mid = (left + right) / 2;
 
         mergeSort(left, mid);
         mergeSort(mid + 1, right);
