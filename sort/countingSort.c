@@ -17,7 +17,6 @@ void countingSort() {
         n_arr[--pos[arr[i]]] = arr[i];
 
     sfree(pos, arr, NULL);
-
     arr = n_arr;
 }
 
