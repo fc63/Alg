@@ -56,34 +56,33 @@ void swap(int * a, int * b) {
 
 int maxarr(int* arr, int arr_size) {
     int max_val = arr[0];
-    for (int i = 1; i < arr_size; i++) {
-        if (arr[i] > max_val) {
+    for (int i = 1; i < arr_size; i++)
+        if (arr[i] > max_val)
             max_val = arr[i];
-        }
-    }
     return max_val;
 }
-int *Array(const int size, const bool isZero) {
+int *Array(const int size, const bool notZero) {
     int* arr;
-    if(isZero) {
-        arr = calloc(size + 1, sizeof(int));
-    }
-    else {
+    if(notZero)
         arr = (int *)malloc((size + 1) * sizeof(int));
-    }
-    if (arr == NULL) {
+    else
+        arr = calloc(size + 1, sizeof(int));
+
+    if (arr == NULL)
         return NULL;
-    }
+
     arr[0] = size;
     return arr + 1;
 }
 int size(int *arr) {
     return arr[-1];
 }
-void dynamicArrayValueAssignment (int * arr, const int values[]) {
-    for (int i = 0; i < arr[-1]; i++) {
-        arr[i] = values[i];
-    }
+bool dynamicArrayValueAssignment (int * arr, const int values[], int values_size) {
+    if(size(arr)==values_size)
+        for (int i = 0; i < size(arr); i++)
+            arr[i] = values[i];
+    else
+        return 1;
 }
 void sfree(int *first, ...) {
     va_list args;

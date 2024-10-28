@@ -28,9 +28,9 @@ bool detectCrossLink(struct BiNode* root1, struct BiNode* root2);
 void swap(int * a, int * b);
 
 int maxarr(int* arr, int arr_size);
-int *Array(const int size, const bool isZero);
+int *Array(const int size, const bool notZero);
 int size(int *arr);
 void sfree(int *first, ...);
-void dynamicArrayValueAssignment (int * arr, const int values[]);
+bool dynamicArrayValueAssignment (int * arr, const int values[], int values_size);
 
 #endif

@@ -5,9 +5,9 @@ int * arr= NULL;
 
 void countingSort() {
 
-    int* n_arr = Array(size(arr),0);
+    int* n_arr = Array(size(arr),true);
     int max = maxarr(arr, size(arr));
-    int * pos = Array(max + 1,1);
+    int * pos = Array(max + 1,false);
     int i = 0;
 
     for (i = 0; i < size(arr); i++)
@@ -36,8 +36,8 @@ void dynamiccs() {
 }
 
 int cs() {
-    arr=Array(7,false);
-    dynamicArrayValueAssignment (arr, values);
+    arr=Array(8,false);
+    dynamicArrayValueAssignment (arr, values, SIZE(values));
     dynamiccs();
     sfree(arr, NULL);
     return 0;
