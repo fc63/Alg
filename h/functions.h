@@ -11,6 +11,7 @@
 #include "bt.h"
 #include "hs.h"
 #include "cs.h"
+#include "o_cs.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 #define MAX_STATIC(arr) ({                                \
