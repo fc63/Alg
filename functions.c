@@ -87,3 +87,13 @@ void sfree(int *first, ...) {
     }
     va_end(args);
 }
+EndIndices findEndIndices(int size) {
+    EndIndices indices;
+    if (size > 0) {
+        indices.leftIndex = 0;           // En soldaki elemanın indeksi
+        indices.rightIndex = size - 1;   // En sağdaki elemanın indeksi
+    } else {
+        indices.leftIndex = indices.rightIndex = -1; // Eğer boyut 0 ise, -1 döndür
+    }
+    return indices;
+}

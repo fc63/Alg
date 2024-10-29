@@ -45,11 +45,15 @@ void mergeSort(int left, int right) {
         merge(left, mid, right);
     }
 }
+void Sort() {
+    EndIndices indices = findEndIndices(SIZE(arr));
+    mergeSort(indices.leftIndex, indices.rightIndex);
+}
 int ms() {
     printf("mergeSort \n\nGiven array is \n");
     printArray(arr, SIZE(arr));
 
-    mergeSort(0, SIZE(arr) - 1);
+    Sort();
 
     printf("\nSorted array is \n");
     printArray(arr, SIZE(arr));

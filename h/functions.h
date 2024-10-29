@@ -43,6 +43,10 @@ struct BiNode {
     struct BiNode* right;
     struct BiNode* parent;
 };
+typedef struct {
+    int leftIndex;
+    int rightIndex;
+} EndIndices;
 void printArray(int A[], int size);
 struct BiNode* newBiNode(int data, struct BiNode* parent);
 void inorderTraversal(struct BiNode* root);
@@ -56,5 +60,6 @@ int *Array(const int size, const bool notZero);
 int size(int *arr);
 void sfree(int *first, ...);
 bool dynamicArrayValueAssignment (int * arr, const int values[], int values_size);
+EndIndices findEndIndices(int size);
 
 #endif
