@@ -63,4 +63,7 @@ void sfree(int *first, ...);
 bool dynamicArrayValueAssignment (int * arr, const int values[], int values_size);
 EndIndices findEndIndices(int size);
 
+void selectionSort();
+int ss();
+
 #endif

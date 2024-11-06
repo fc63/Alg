@@ -25,4 +25,5 @@ add_executable(Algo
         h/cs.h
         sort/optimized_countingSort.c
         h/o_cs.h
+        sort/selectionSort.c
 )
