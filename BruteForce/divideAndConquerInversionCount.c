@@ -46,5 +46,5 @@ void divideAndConquerInversionCount(int arr[], int n) {
     int *temp = (int *)malloc(n * sizeof(int));
     int invCount = mergeSortAndCount(arr, temp, 0, n - 1);
     free(temp);
-    printf("Total number of inversions using divide and conquer is: %d\\n", invCount);
+    printf("Total number of inversions using divide and conquer is: %d\n", invCount);
 }

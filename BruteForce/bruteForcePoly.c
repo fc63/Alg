@@ -9,5 +9,5 @@ void bruteForcePoly(int P[], int n, int x) {
         power *= x;
     }
 
-    printf("Polynomial value at x = %d is %d\\n", x, result);
+    printf("Polynomial value at x = %d is %d\n", x, result);
 }
