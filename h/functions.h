@@ -16,6 +16,7 @@
 #include "bbp.h"
 #include "bc.h"
 #include "mb.h"
+#include "cp.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 #define MAX_STATIC(arr) ({                                \
