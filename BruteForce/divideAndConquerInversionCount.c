@@ -1,16 +1,15 @@
 #include "h/functions.h"
 
-int mergeAndCount(int arr[], int temp[], int left, int mid, int right) {
+int MergeAndCountSplit(int arr[], int temp[], int left, int mid, int right) {
     int i = left;
     int j = mid + 1;
     int k = left;
     int invCount = 0;
 
-    while (i <= mid && j <= right) {
+    while ((i <= mid) && (j <= right)) {
         if (arr[i] <= arr[j]) {
             temp[k++] = arr[i++];
         } else {
-
             temp[k++] = arr[j++];
             invCount += (mid - i + 1);
         }
@@ -37,7 +36,7 @@ int mergeSortAndCount(int arr[], int temp[], int left, int right) {
 
         invCount += mergeSortAndCount(arr, temp, mid + 1, right);
 
-        invCount += mergeAndCount(arr, temp, left, mid, right);
+        invCount += MergeAndCountSplit(arr, temp, left, mid, right);
     }
     return invCount;
 }

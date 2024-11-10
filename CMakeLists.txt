@@ -34,6 +34,4 @@ add_executable(Algo
         h/bc.h
         BruteForce/divideAndConquerInversionCount.c
         h/mb.h
-        BruteForce/inversion.c
-        h/inv.h
 )

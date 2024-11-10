@@ -15,7 +15,6 @@
 #include "bp.h"
 #include "bbp.h"
 #include "bc.h"
-#include "inv.h"
 #include "mb.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 

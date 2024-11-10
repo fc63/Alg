@@ -3,7 +3,7 @@
 int main() {
     int i = 0, j = 0;
 
-    printf("1. Sort\n2. Btr\n3. Brute Force\n4. Polynomial Evaluation\n5. Inversion Count\n\nYour choice:");
+    printf("1. Sort\n2. Btr\n3. Brute Force\n4. Polynomial Evaluation\n\nYour choice:");
     scanf("%d", &i);
     switch(i) {
         case 1:
@@ -59,23 +59,6 @@ int main() {
                 }
             }
             break;
-        case 5:
-            printf("1. Brute Force Inversion Count\n2. Divide and Conquer Inversion Count\n\nYour choice: ");
-        scanf("%d", &j);
-        printf("\n");
-        switch(j) {
-            case 1: {
-                int A[] = {5, 3, 2, 1, 4};
-                bruteForceInversionCount(A, SIZE(A));
-                break;
-            }
-            case 2: {
-                int A[] = {5, 3, 2, 1, 4};
-                divideAndConquerInversionCount(A, SIZE(A));
-                break;
-            }
-        }
-        break;
         default:
             printf("Invalid choice.\n");
     }
