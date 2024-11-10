@@ -12,6 +12,11 @@
 #include "hs.h"
 #include "cs.h"
 #include "o_cs.h"
+#include "bp.h"
+#include "bbp.h"
+#include "bc.h"
+#include "inv.h"
+#include "mb.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 #define MAX_STATIC(arr) ({                                \

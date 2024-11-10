@@ -3,7 +3,7 @@
 int main() {
     int i = 0, j = 0;
 
-    printf("1. Sort\n2. Btr\n\nYour choice:");
+    printf("1. Sort\n2. Btr\n3. Brute Force\n\nYour choice:");
     scanf("%d",&i);
     switch(i) {
         case 1:

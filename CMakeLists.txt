@@ -26,4 +26,14 @@ add_executable(Algo
         sort/optimized_countingSort.c
         h/o_cs.h
         sort/selectionSort.c
+        BruteForce/bruteForcePoly.c
+        h/bp.h
+        BruteForce/betterBruteForcePoly.c
+        h/bbp.h
+        BruteForce/bruteForceInversionCount.c
+        h/bc.h
+        BruteForce/divideAndConquerInversionCount.c
+        h/mb.h
+        BruteForce/inversion.c
+        h/inv.h
 )
