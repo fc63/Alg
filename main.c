@@ -29,13 +29,13 @@ int main() {
             printf("\n");
             switch(j) {
                 case 1: {
-                    int P[] = {3, 2, 1};
+                    int P[] = {1, 2, 3};
                     int x = 2;
                     bruteForcePoly(P, SIZE(P) - 1, x);
                     break;
                 }
                 case 2: {
-                    int P[] = {3, 2, 1};
+                    int P[] = {1, 2, 3};
                     int x = 2;
                     printf("Better Brute Force Polynomial result: %d\n", betterBruteForcePoly(P, SIZE(P) - 1, x));
                     break;
