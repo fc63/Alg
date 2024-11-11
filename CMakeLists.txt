@@ -36,4 +36,6 @@ add_executable(Algo
         h/mb.h
         closestpair/closestPair.c
         h/cp.h
+        h/uc63s.h
+        external/UC63Sort.c
 )

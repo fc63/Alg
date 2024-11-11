@@ -2,10 +2,6 @@
 #include <math.h>
 #include <float.h>
 
-typedef struct Point {
-    int x, y;
-} Point;
-
 double distance(Point p1, Point p2) {
     return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
 }
@@ -33,7 +29,7 @@ double bruteForce(Point points[], int n) {
 
 double stripClosest(Point strip[], int size, double d) {
     double minDist = d;
-    qsort(strip, size, sizeof(Point), compareY);
+    UC63Sort(strip, size, compareY);
 
     for (int i = 0; i < size; ++i)
         for (int j = i + 1; j < size && (strip[j].y - strip[i].y) < minDist; ++j)
@@ -64,7 +60,7 @@ double closestUtil(Point points[], int left, int right) {
 }
 
 double closestPair(Point points[], int n) {
-    qsort(points, n, sizeof(Point), compareX);
+    UC63Sort(points, n, compareX);
     return closestUtil(points, 0, n - 1);
 }
 
