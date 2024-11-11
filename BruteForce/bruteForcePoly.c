@@ -9,7 +9,6 @@ void bruteForcePoly(int P[], int n, int x) {
         for (int j = 0; j < i; j++)
             power *= x;
 
-
         result += P[i] * power;
     }
 
