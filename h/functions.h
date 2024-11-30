@@ -18,6 +18,7 @@
 #include "mb.h"
 #include "cp.h"
 #include "uc63s.h"
+#include "optms.h"
 #define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 #define MAX_STATIC(arr) ({                                \

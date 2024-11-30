@@ -19,6 +19,7 @@ int main() {
                 case 6: return cs();
                 case 7: return o_cs();
                 case 8: return ss();
+                case 9: return Oms();
             }
             break;
         case 2:
