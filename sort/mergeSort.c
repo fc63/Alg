@@ -8,11 +8,11 @@ void merge(int left, int mid, int right) {
     int n2 = -mid + right;
     int L[n1], R[n2];
 
-    for (i = 0; i < n1; i++)
-        L[i] = arr[left + i];
+    while (i < n1)
+        L[i++] = arr[left + i];
 
-    for (j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
+    while (j < n2)
+        R[j++] = arr[mid + 1 + j];
 
     i = 0; j = 0;
 
