@@ -3,7 +3,6 @@
 static int arr[] = {12, 11, 13, 5, 6, 7, 9, 15, 21, 18, 25, 33, 42, 1, 4, 8, 19, 27, 50, 3};
 
 void Omerge(int left, int mid, int right) {
-
     int i = 0, j = 0, k = left;
     int n1 = mid + 1 - left;
     int n2 = -mid + right;
@@ -13,7 +12,6 @@ void Omerge(int left, int mid, int right) {
         L[i++] = arr[left + i];
         R[j++] = arr[mid + 1 + j];
     }
-
     if (i < n1 || j < n2) {
         if (i < n1)
             L[i++] = arr[left + i];
