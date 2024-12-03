@@ -18,17 +18,14 @@ void merge(int left, int mid, int right) {
 
     while (i < n1 && j < n2) {
         if (L[i] <= R[j])
-            arr[k] = L[i++];
+            arr[k++] = L[i++];
         else
-            arr[k] = R[j++];
-        k++;
+            arr[k++] = R[j++];
     }
-
     while (i < n1)
         arr[k++] = L[i++];
     while (j < n2)
         arr[k++] = R[j++];
-
 }
 void mergeSort(int left, int right) {
     if (left < right) {
