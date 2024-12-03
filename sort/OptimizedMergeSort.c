@@ -27,10 +27,9 @@ void Omerge(int left, int mid, int right) {
     while (i < n1 || j < n2) {
         if (i < n1 && j < n2) {
             if (L[i] <= R[j])
-                arr[k] = L[i++];
+                arr[k++] = L[i++];
             else
-                arr[k] = R[j++];
-            k++;
+                arr[k++] = R[j++];
         }
         else if(i < n1)
             arr[k++] = L[i++];
