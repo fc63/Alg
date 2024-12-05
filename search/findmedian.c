@@ -13,64 +13,56 @@ double findMedianSortedArrays(int A[], int B[], int n) {
         int maxLeftA, minRightA;
         int maxLeftB, minRightB;
 
-        if (partitionA == 0) {
+        if (partitionA == 0)
             maxLeftA = NEG_INFINITY;
-        } else {
+        else
             maxLeftA = A[partitionA - 1];
-        }
-        if (partitionA == n) {
+            
+        if (partitionA == n)
             minRightA = POS_INFINITY;
-        } else {
+        else
             minRightA = A[partitionA];
-        }
 
-        if (partitionB == 0) {
+        if (partitionB == 0)
             maxLeftB = NEG_INFINITY;
-        } else {
+        else
             maxLeftB = B[partitionB - 1];
-        }
-        if (partitionB == n) {
+        
+        if (partitionB == n)
             minRightB = POS_INFINITY;
-        } else {
+        else
             minRightB = B[partitionB];
-        }
 
         if (maxLeftA <= minRightB && minRightA > maxLeftB) {
 
             if ((n + n) % 2 == 1) {
-                if (maxLeftA > maxLeftB) {
+                if (maxLeftA > maxLeftB)
                     return (double)maxLeftA;
-                } else {
+                else
                     return (double)maxLeftB;
-                }
             }
 
             double leftMax, rightMin;
 
-            if (maxLeftA > maxLeftB) {
+            if (maxLeftA > maxLeftB)
                 leftMax = maxLeftA;
-            } else {
+            else
                 leftMax = maxLeftB;
-            }
 
-            if (minRightA < minRightB) {
+            if (minRightA < minRightB)
                 rightMin = minRightA;
-            } else {
+            else
                 rightMin = minRightB;
-            }
 
             return (leftMax + rightMin) / 2.0;
         }
 
-        else if (maxLeftA > minRightB) {
+        else if (maxLeftA > minRightB)
             high = partitionA - 1;
-        }
 
-        else {
+        else
             low = partitionA + 1;
-        }
     }
-
     return -1.0;
 }
 
