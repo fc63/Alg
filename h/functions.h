@@ -73,4 +73,7 @@ EndIndices findEndIndices(int size);
 void selectionSort();
 int ss();
 
+double findMedianSortedArrays(int A[], int B[], int n);
+int median();
+
 #endif

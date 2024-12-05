@@ -40,4 +40,5 @@ add_executable(Algo
         external/UC63Sort.c
         sort/OptimizedMergeSort.c
         h/optms.h
+        search/findmedian.c
 )
