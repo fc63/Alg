@@ -8,7 +8,7 @@ int part(int low, int high) {
 
     for (j = low; j <= high - 1; j++) {
         if (arr[j] < arr[high])
-            swap(& arr[i++], & arr[j]);
+            swap(& arr[++i], & arr[j]);
     }
     swap(& arr[i + 1],& arr[high]);
     return i + 1;
