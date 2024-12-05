@@ -4,14 +4,12 @@
 #define POS_INFINITY  2147483647
 
 double findMedianSortedArrays(int A[], int B[], int n) {
-    int low = 0, high = n;
+    int low = 0, high = n, maxLeftA, minRightA, maxLeftB, minRightB, partitionA, partitionB;
+    double leftMax, rightMin;
 
     while (low <= high) {
-        int partitionA = (low + high) / 2;
-        int partitionB = (n + n + 1) / 2 - partitionA;
-
-        int maxLeftA, minRightA;
-        int maxLeftB, minRightB;
+        partitionA = (low + high) / 2;
+        partitionB = (n + n + 1) / 2 - partitionA;
 
         if (partitionA == 0)
             maxLeftA = NEG_INFINITY;
@@ -34,15 +32,12 @@ double findMedianSortedArrays(int A[], int B[], int n) {
             minRightB = B[partitionB];
 
         if (maxLeftA <= minRightB && minRightA > maxLeftB) {
-
             if ((n + n) % 2 == 1) {
                 if (maxLeftA > maxLeftB)
                     return (double)maxLeftA;
                 else
                     return (double)maxLeftB;
             }
-
-            double leftMax, rightMin;
 
             if (maxLeftA > maxLeftB)
                 leftMax = maxLeftA;
