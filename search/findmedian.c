@@ -56,10 +56,8 @@ double findMedianSortedArrays(int A[], int B[], int n) {
 
             return (leftMax + rightMin) / 2.0;
         }
-
         else if (maxLeftA > minRightB)
             high = partitionA - 1;
-
         else
             low = partitionA + 1;
     }
