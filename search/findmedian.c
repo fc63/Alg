@@ -3,71 +3,71 @@
 #define NEG_INFINITY (-2147483648)
 #define POS_INFINITY  2147483647
 
-double findMedianSortedArrays(int A[], int B[], int n) {
-    int low = 0, high = n;
+double findMedianSortedArrays(int Sol[], int Sag[], int size) {
+    int low = 0, high = size;
 
     while (low <= high) {
-        int partitionA = (low + high) / 2;
-        int partitionB = (n + n + 1) / 2 - partitionA;
+        int partition_Sol = (low + high) / 2;
+        int partition_Sag = (size + size + 1) / 2 - partition_Sol;
 
-        int maxLeftA, minRightA;
-        int maxLeftB, minRightB;
+        int ortaninSolu_Sol, orta_Sol;
+        int ortaninSolu_Sag, orta_Sag;
 
-        if (partitionA == 0) {
-            maxLeftA = NEG_INFINITY;
+        if (partition_Sol == 0) {
+            ortaninSolu_Sol = NEG_INFINITY;
         } else {
-            maxLeftA = A[partitionA - 1];
+            ortaninSolu_Sol = Sol[partition_Sol - 1];
         }
-        if (partitionA == n) {
-            minRightA = POS_INFINITY;
+        if (partition_Sol == size) {
+            orta_Sol = POS_INFINITY;
         } else {
-            minRightA = A[partitionA];
-        }
-
-        if (partitionB == 0) {
-            maxLeftB = NEG_INFINITY;
-        } else {
-            maxLeftB = B[partitionB - 1];
-        }
-        if (partitionB == n) {
-            minRightB = POS_INFINITY;
-        } else {
-            minRightB = B[partitionB];
+            orta_Sol = Sol[partition_Sol];
         }
 
-        if (maxLeftA <= minRightB && minRightA > maxLeftB) {
+        if (partition_Sag == 0) {
+            ortaninSolu_Sag = NEG_INFINITY;
+        } else {
+            ortaninSolu_Sag = Sag[partition_Sag - 1];
+        }
+        if (partition_Sag == size) {
+            orta_Sag = POS_INFINITY;
+        } else {
+            orta_Sag = Sag[partition_Sag];
+        }
 
-            if ((n + n) % 2 == 1) {
-                if (maxLeftA > maxLeftB) {
-                    return (double)maxLeftA;
+        if (ortaninSolu_Sol <= orta_Sag && orta_Sol > ortaninSolu_Sag) {
+
+            if ((size + size) % 2 == 1) {
+                if (ortaninSolu_Sol > ortaninSolu_Sag) {
+                    return (double)ortaninSolu_Sol;
                 } else {
-                    return (double)maxLeftB;
+                    return (double)ortaninSolu_Sag;
                 }
             }
 
-            double leftMax, rightMin;
+            double ortaninSolu_Max, orta_Min;
 
-            if (maxLeftA > maxLeftB) {
-                leftMax = maxLeftA;
+            if (ortaninSolu_Sol > ortaninSolu_Sag) {
+                ortaninSolu_Max = ortaninSolu_Sol;
             } else {
-                leftMax = maxLeftB;
+                ortaninSolu_Max = ortaninSolu_Sag;
             }
 
-            if (minRightA < minRightB) {
-                rightMin = minRightA;
+            if (orta_Sol < orta_Sag) {
+                orta_Min = orta_Sol;
             } else {
-                rightMin = minRightB;
+                orta_Min = orta_Sag;
             }
 
-            return (leftMax + rightMin) / 2.0;
+            return (ortaninSolu_Max + orta_Min) / 2.0;
         }
 
-        else if (maxLeftA > minRightB) {
-            high = partitionA - 1;
+        else if (ortaninSolu_Sol > orta_Sag) {
+            high = partition_Sol - 1;
         }
 
         else {
-            low = partitionA + 1;
+            low = partition_Sol + 1;
         }
     }
 
@@ -75,8 +75,8 @@ double findMedianSortedArrays(int A[], int B[], int n) {
 }
 
 int median() {
-    int A[] = {1, 3, 8};
-    int B[] = {7, 9, 10};
+    int A[] = {1, 2, 7, 9};
+    int B[] = {4, 5, 6, 8};
     int n = sizeof(A) / sizeof(A[0]);
 
     double median = findMedianSortedArrays(A, B, n);
