@@ -41,4 +41,5 @@ add_executable(Algo
         sort/OptimizedMergeSort.c
         h/optms.h
         search/findmedian.c
+        mtquestions/isMaxHeap.c
 )
