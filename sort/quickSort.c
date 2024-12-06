@@ -6,12 +6,11 @@ int part(int low, int high) {
     int i = low - 1;
     int j = 0;
 
-    for (j = low; j <= high - 1; j++) {
+    for (j = low; j <= high - 1; j++)
         if (arr[j] < arr[high])
-            swap(& arr[i++], & arr[j]);
-    }
-    swap(& arr[i + 1],& arr[high]);
-    return i + 1;
+            swap(& arr[++i],& arr[j]);
+    swap(& arr[++i],& arr[high]);
+    return i;
 }
 void quickSort(int low, int high) {
     if (low < high) {

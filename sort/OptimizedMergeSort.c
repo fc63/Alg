@@ -12,12 +12,10 @@ void Omerge(int left, int mid, int right) {
         L[i++] = arr[left + i];
         R[j++] = arr[mid + 1 + j];
     }
-    if (i < n1 || j < n2) {
-        if (i < n1)
+    if (i < n1)
             L[i++] = arr[left + i];
-        else
+    else if (j < n2)
             R[j++] = arr[mid + 1 + j];
-    }
 
     i = 0;
     j = 0;
@@ -34,7 +32,6 @@ void Omerge(int left, int mid, int right) {
         else
             arr[k++] = R[j++];
     }
-
 }
 void OmergeSort(int left, int right) {
     if (left < right) {
