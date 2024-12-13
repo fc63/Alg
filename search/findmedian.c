@@ -62,7 +62,7 @@ double findMedianSortedArrays(int Sol[], int Sag[], int size) {
             return (ortaninSolu_Max + orta_Min) / 2.0;
         }
 
-        else if (ortaninSolu_Sol > orta_Sag) {
+        if (ortaninSolu_Sol > orta_Sag) {
             high = partition_Sol - 1;
         }
 

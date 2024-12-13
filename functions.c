@@ -9,7 +9,6 @@ void printArray(int* A, int size) {
         printf("%5d ", A[i]);
     printf("\n");
 }
-
 struct BiNode* newBiNode(int data, struct BiNode* parent) {
     struct BiNode* BiNode = (struct BiNode*)malloc(sizeof(struct BiNode));
     BiNode->data = data;
@@ -18,14 +17,12 @@ struct BiNode* newBiNode(int data, struct BiNode* parent) {
     BiNode->parent = parent;
     return BiNode;
 }
-
 void inorderTraversal(struct BiNode* root) {
     if (root == NULL) return;
     inorderTraversal(root->left);
     printf("%d ", root->data);
     inorderTraversal(root->right);
 }
-
 bool isCrossLinked(struct BiNode *root1, struct BiNode *root2) {
     if (root1 == NULL || root2 == NULL)
         return false;
@@ -35,7 +32,6 @@ bool isCrossLinked(struct BiNode *root1, struct BiNode *root2) {
 
     return isCrossLinked(root1, root2->left) || isCrossLinked(root1, root2->right);
 }
-
 bool detectCrossLink(struct BiNode* root1, struct BiNode* root2) {
     if (root1 == NULL)
         return false;
@@ -47,7 +43,6 @@ bool detectCrossLink(struct BiNode* root1, struct BiNode* root2) {
 
     return detectCrossLink(root1->left, root2) || detectCrossLink(root1->right, root2);
 }
-
 void swap(int * a, int * b) {
     int t = * a;
     * a = * b;

@@ -34,10 +34,7 @@ add_executable(Algo
         h/bc.h
         BruteForce/divideAndConquerInversionCount.c
         h/mb.h
-        closestpair/closestPair.c
         h/cp.h
-        h/uc63s.h
-        external/UC63Sort.c
         sort/OptimizedMergeSort.c
         h/optms.h
         search/findmedian.c
