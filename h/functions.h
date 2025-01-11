@@ -17,7 +17,9 @@
 #include "bc.h"
 #include "mb.h"
 #include "optms.h"
-#define SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+
+#define IS_STATIC_ARRAY(arr) (sizeof(arr) > sizeof(int*))
+#define SIZE(arr) (IS_STATIC_ARRAY(arr) ? (sizeof(arr) / sizeof((arr)[0])) : size(arr))
 
 #define MAX_STATIC(arr) ({                                \
 int max = (arr)[0];                                   \
@@ -38,8 +40,6 @@ max = (arr)[i];                 \
 }                                       \
 max;                                    \
 })
-
-#define IS_STATIC_ARRAY(arr) (sizeof(arr) > sizeof(int*))
 
 #define MAX(arr) (IS_STATIC_ARRAY(arr) ? MAX_STATIC(arr) : MAX_DYNAMIC(arr))
 
