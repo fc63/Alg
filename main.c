@@ -3,7 +3,7 @@
 int main() {
     int i = 0, j = 0;
 
-    printf("1. Sort\n2. Btr\n3. Polynomial Evaluation\n4. Inversion Count\n5. Median\n\nYour choice:");
+    printf("1. Sort\n2. Btr\n3. Polynomial Evaluation\n4. Inversion Count\n5. Median\n6. Final Calisma Alani\n\nYour choice:");
     scanf("%d", &i);
     switch(i) {
         case 1:
@@ -62,6 +62,8 @@ int main() {
             break;
         case 5:
             median();
+        break;
+        case 6: fnl();
         break;
         default:
             printf("Invalid choice.\n");

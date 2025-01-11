@@ -39,4 +39,6 @@ add_executable(Algo
         h/optms.h
         search/findmedian.c
         mtquestions/isMaxHeap.c
+        FinalCalismaAlani/sorucalismaalani.c
+        FinalCalismaAlani/final.h
 )
