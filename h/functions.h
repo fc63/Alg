@@ -19,8 +19,11 @@
 #include "optms.h"
 #include "FinalCalismaAlani/final.h"
 
-#define IS_STATIC_ARRAY(arr) (sizeof(arr) > sizeof(int*))
-#define SIZE(arr) (IS_STATIC_ARRAY(arr) ? (sizeof(arr) / sizeof((arr)[0])) : size(arr))
+#define SIZE(arr) (                                           \
+    (sizeof(arr) > sizeof(int*))                              \
+        ? (sizeof(arr) / sizeof((arr)[0]))                    \
+        : size(arr)                                           \
+)
 
 #define MAX(arr) (  {                                \
     int max = (arr)[0];                              \
