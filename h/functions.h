@@ -22,18 +22,15 @@
 #define IS_STATIC_ARRAY(arr) (sizeof(arr) > sizeof(int*))
 #define SIZE(arr) (IS_STATIC_ARRAY(arr) ? (sizeof(arr) / sizeof((arr)[0])) : size(arr))
 
-#define MAX(arr) ({                                      \
-int max = (arr)[0];                                  \
-int length = IS_STATIC_ARRAY(arr) ?                  \
-(sizeof(arr) / sizeof((arr)[0])) :      \
-size(arr);                              \
-for (int i = 1; i < length; i++) {                   \
-if ((arr)[i] > max) {                            \
-max = (arr)[i];                              \
-}                                                \
-}                                                    \
-max;                                                 \
-})
+#define MAX(arr) (  {                                \
+    int max = (arr)[0];                              \
+    int length = SIZE(arr);                          \
+    for (int i = 1; i < length; i++) {               \
+        if ((arr)[i] > max) {                        \
+            max = (arr)[i];                          \
+        }                                            \
+    }                                                \
+    max;    }   )
 
 struct BiNode {
     int data;
